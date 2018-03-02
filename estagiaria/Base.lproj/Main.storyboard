@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WgU-89-PPF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies Collection View Controller-->
+        <scene sceneID="1Ln-dj-G9t">
+            <objects>
+                <collectionViewController id="WgU-89-PPF" customClass="MoviesCollectionViewController" customModule="estagiaria" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Lpm-7I-Ag2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9P1-I4-0NB">
+                            <size key="itemSize" width="110" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="xbT-LP-Hyx" customClass="MovieCollectionViewCell" customModule="estagiaria" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fC5-S8-fRC">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gy-XG-JAW">
+                                            <rect key="frame" x="0.0" y="124" width="110" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="8gy-XG-JAW" firstAttribute="leading" secondItem="xbT-LP-Hyx" secondAttribute="leading" id="2Xu-Sl-nF9"/>
+                                    <constraint firstAttribute="bottom" secondItem="fC5-S8-fRC" secondAttribute="bottom" constant="26" id="Ke1-sc-YTr"/>
+                                    <constraint firstAttribute="trailing" secondItem="fC5-S8-fRC" secondAttribute="trailing" id="NhI-Dg-ja9"/>
+                                    <constraint firstItem="fC5-S8-fRC" firstAttribute="leading" secondItem="xbT-LP-Hyx" secondAttribute="leading" id="S3o-s6-ZWx"/>
+                                    <constraint firstItem="fC5-S8-fRC" firstAttribute="top" secondItem="xbT-LP-Hyx" secondAttribute="top" id="WSH-gJ-Ebn"/>
+                                    <constraint firstAttribute="trailing" secondItem="8gy-XG-JAW" secondAttribute="trailing" id="mso-tD-qVu"/>
+                                    <constraint firstAttribute="bottom" secondItem="8gy-XG-JAW" secondAttribute="bottom" id="sNP-YA-W3U"/>
+                                    <constraint firstItem="8gy-XG-JAW" firstAttribute="top" secondItem="fC5-S8-fRC" secondAttribute="bottom" id="wvs-dW-bIc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="labelMovie" destination="8gy-XG-JAW" id="IOY-mm-I6X"/>
+                                    <outlet property="posterMovie" destination="fC5-S8-fRC" id="Vcd-5E-AZk"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="WgU-89-PPF" id="Va6-0i-GDe"/>
+                            <outlet property="delegate" destination="WgU-89-PPF" id="kAU-t3-cTy"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfa-Vr-BgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490.39999999999998" y="-44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>
